@@ -20,7 +20,9 @@
   },
   "lint-staged": {
     "**/**/*.{ts,tsx,js}": [
-      "npm run lint",
+      "npm run lint"
+    ],
+    "**/**/*.test.{ts,tsx,js}": [
       "npm run test --findRelatedTests --bail --passWithNoTests"
     ]
   },
