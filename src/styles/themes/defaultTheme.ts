@@ -14,4 +14,4 @@ export const defaultTheme = {
   space: {},
   transitions: {},
   zIndices: {}
-}
+} as const
