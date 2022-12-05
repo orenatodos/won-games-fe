@@ -16,6 +16,14 @@ export default {
     line: {
       options: ['bottom', 'left'],
       control: { type: 'radio' }
+    },
+    lineColor: {
+      options: ['primary', 'secondary'],
+      control: { type: 'select' }
+    },
+    size: {
+      options: ['sm', 'md'],
+      control: { type: 'radio' }
     }
   },
   args: {
