@@ -43,3 +43,13 @@ export const ButtonWithIcon: ComponentStory<typeof Button> = ({
     {children}
   </Button>
 )
+
+export const ButtonAsLink: ComponentStory<typeof Button> = ({
+  ...args
+}) => <Button {...args} />
+
+ButtonAsLink.args = {
+  as: 'a',
+  href: 'https://google.com',
+  target: '_blank'
+}

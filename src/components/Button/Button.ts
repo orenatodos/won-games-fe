@@ -61,6 +61,7 @@ export const Button = styled.button<ButtonProps>`
     align-items: center;
     justify-content: center;
     gap: ${theme.space.xxsmall};
+    text-decoration: none;
 
     ${fullWidth &&
     css`
