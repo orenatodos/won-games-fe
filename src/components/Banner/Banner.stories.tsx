@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import { Banner } from '.'
+import { Banner, BannerRibbon } from '.'
 
 export default {
   title: 'Components/Banner',
@@ -18,5 +18,17 @@ export default {
 } as ComponentMeta<typeof Banner>
 
 export const _Banner: ComponentStory<typeof Banner> = (args) => (
-  <Banner {...args} />
+  <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
+    <Banner {...args} />
+  </div>
+)
+
+export const BannerWithRibbon: ComponentStory<typeof Banner> = (args) => (
+  <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
+    <Banner {...args}>
+      <BannerRibbon variant="secondary" size="small">
+        Best Seller
+      </BannerRibbon>
+    </Banner>
+  </div>
 )

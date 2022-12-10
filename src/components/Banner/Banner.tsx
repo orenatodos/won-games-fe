@@ -8,6 +8,7 @@ type BannerProps = {
   img: string
   title: string
   subtitle: string
+  children?: React.ReactNode
   buttonLabel: string
   buttonLink: string
 }
@@ -15,6 +16,7 @@ type BannerProps = {
 export function Banner({
   buttonLabel,
   buttonLink,
+  children,
   img,
   subtitle,
   title
@@ -30,6 +32,10 @@ export function Banner({
           <Button as="a">{buttonLabel}</Button>
         </Link>
       </Styled.Caption>
+
+      {children}
     </Styled.Wrapper>
   )
 }
+
+export { Ribbon as BannerRibbon } from '../Ribbon'
