@@ -4,7 +4,7 @@ import { Button } from '../Button'
 
 import * as Styled from './Banner.styles'
 
-type BannerProps = {
+export type BannerProps = {
   img: string
   title: string
   subtitle: string
