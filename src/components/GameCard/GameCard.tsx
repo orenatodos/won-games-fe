@@ -8,7 +8,7 @@ import { Button } from '../Button'
 
 import * as Styled from './GameCard.styles'
 
-type GameCardProps = {
+export type GameCardProps = {
   img: string
   title: string
   developer: string
