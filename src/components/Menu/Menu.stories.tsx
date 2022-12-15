@@ -7,7 +7,7 @@ export default {
   component: Menu,
   parameters: {
     backgrounds: {
-      default: 'dark'
+      default: 'won-dark'
     }
   }
 } as ComponentMeta<typeof Menu>
