@@ -4,33 +4,21 @@ import { customRender } from '~/utils/tests'
 import 'match-media-mock'
 
 import { BannerSlider } from '.'
-
-const banners = [
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
-    title: 'Defy death 1',
-    subtitle: '<p>Play the new <strong>Crashlands</strong> season</p>',
-    buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
-    title: 'Defy death 2',
-    subtitle: '<p>Play the new <strong>Crashlands</strong> season</p>',
-    buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death'
-  }
-]
+import { bannersMock } from './BannerSlider.mock'
 
 describe('<BannerSlider />', () => {
   it('should render vertical slider', () => {
-    const { container } = customRender(<BannerSlider banners={banners} />)
+    const { container } = customRender(
+      <BannerSlider banners={bannersMock} />
+    )
 
     expect(container.querySelector('.slick-vertical')).toBeInTheDocument()
   })
 
   it('should render with 1 active item', () => {
-    const { container } = customRender(<BannerSlider banners={banners} />)
+    const { container } = customRender(
+      <BannerSlider banners={bannersMock} />
+    )
 
     expect(container.querySelectorAll('.slick-slide')).toHaveLength(2)
     expect(container.querySelectorAll('li.slick-active')).toHaveLength(1)
@@ -45,7 +33,9 @@ describe('<BannerSlider />', () => {
   })
 
   it('should render with the dots', () => {
-    const { container } = customRender(<BannerSlider banners={banners} />)
+    const { container } = customRender(
+      <BannerSlider banners={bannersMock} />
+    )
 
     expect(container.querySelector('.slick-dots')).toBeInTheDocument()
   })
