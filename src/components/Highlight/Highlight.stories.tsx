@@ -1,16 +1,13 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Highlight } from '.'
+import { highlightMock } from './Highlight.mock'
 
 export default {
   title: 'Components/Highlight',
   component: Highlight,
   args: {
-    thumbnail: '/images/red-dead-bg.jpg',
-    title: 'Read Dead it’s back',
-    subtitle: 'Come see John’s new adventures',
-    buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death'
+    ...highlightMock
   },
   parameters: {
     layout: 'fullscreen'
