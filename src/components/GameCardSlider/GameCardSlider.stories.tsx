@@ -8,7 +8,7 @@ export default {
   component: GameCardSlider,
   args: {
     items: gamesMock,
-    arrowColor: 'black'
+    arrowColor: 'white'
   },
   parameters: {
     layout: 'fullscreen',

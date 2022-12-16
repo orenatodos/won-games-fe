@@ -51,7 +51,7 @@ const settings: SliderSettings = {
 
 export function GameCardSlider({
   items,
-  arrowColor = 'black'
+  arrowColor = 'white'
 }: GameCardSliderProps) {
   return (
     <Styled.Wrapper arrowColor={arrowColor}>
