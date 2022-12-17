@@ -41,4 +41,13 @@ describe('<Button />', () => {
       width: '100%'
     })
   })
+
+  it('should render a ghost version', () => {
+    customRender(<Button ghost>Buy now</Button>)
+
+    expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyle({
+      background: 'none',
+      color: '#F231A5'
+    })
+  })
 })

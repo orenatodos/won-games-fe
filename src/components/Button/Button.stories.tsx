@@ -18,6 +18,9 @@ export default {
       options: ['sm', 'md', 'lg'],
       control: { type: 'radio' }
     },
+    ghost: {
+      type: 'boolean'
+    },
     fullWidth: {
       type: 'boolean'
     }
@@ -26,6 +29,7 @@ export default {
     children: 'Buy now',
     variant: 'primary',
     size: 'md',
+    ghost: false,
     fullWidth: false
   }
 } as ComponentMeta<typeof Button>
