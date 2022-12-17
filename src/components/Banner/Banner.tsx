@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import { Button } from '../Button'
 
 import * as Styled from './Banner.styles'
@@ -28,9 +26,9 @@ export function Banner({
       <Styled.Caption>
         <Styled.Title>{title}</Styled.Title>
         <Styled.Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
-        <Link href={buttonLink} passHref>
-          <Button as="a">{buttonLabel}</Button>
-        </Link>
+        <Button as="a" href={buttonLink}>
+          {buttonLabel}
+        </Button>
       </Styled.Caption>
 
       {children}
